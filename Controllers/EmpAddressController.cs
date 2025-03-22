@@ -8,6 +8,7 @@ using System.Web.Http;
 namespace MVCWebAPI_January.Controllers
 {
     // Routing => Conv, attribute
+    [Authorize(Roles = "Admin")]
     [RoutePrefix("api/EmpAddress")]
     public class EmpAddressController : ApiController
     {
@@ -15,6 +16,7 @@ namespace MVCWebAPI_January.Controllers
 
         [HttpGet]
         [Route("GetEmpAddresses")]
+
         public IHttpActionResult GetEmpAddresses()
         {
             var getList = _dbContext.EmpAddresses.ToList();
@@ -77,7 +79,7 @@ namespace MVCWebAPI_January.Controllers
 
         }
 
-
+        [AllowAnonymous]
         [HttpDelete]
         [Route("DeleteEmpAddress")]
         public IHttpActionResult DeleteEmpAddress(int employeeAddressID)

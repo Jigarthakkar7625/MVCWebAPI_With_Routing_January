@@ -15,7 +15,6 @@ namespace MVCWebAPI_January
     public partial class EmpAddress
     {
         public int EmployeeAddressID { get; set; }
-
         public string Address { get; set; }
         public Nullable<int> EmployeeID { get; set; }
     }

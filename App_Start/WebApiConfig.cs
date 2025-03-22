@@ -11,6 +11,9 @@ namespace MVCWebAPI_January
         {
             // Web API configuration and services
 
+            config.SuppressDefaultHostAuthentication();
+            config.Filters.Add(new HostAuthenticationFilter("Bearer"));
+
             // Web API routes
             config.MapHttpAttributeRoutes();
 
