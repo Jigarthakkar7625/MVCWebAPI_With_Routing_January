@@ -7,6 +7,13 @@ using System.Web.Http;
 
 namespace MVCWebAPI_January.Controllers
 {
+
+    // Jwt : JSON Web token
+    // Oauth 2.0
+    // Asp.net identity
+
+
+
     // Routing => Conv, attribute
     [Authorize(Roles = "Admin")]
     [RoutePrefix("api/EmpAddress")]
